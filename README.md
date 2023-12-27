@@ -1,4 +1,14 @@
-# HomesApp
+# Homes App
+
+## From Angular Tutorials 
+
+### Since I already added the locations list to the simple Node.js & Express REST API that I developed, I thought it might be nice to have the matching frontend to go along.
+
+### This is not my first app and I am not following every single instruction from the tutorial but I am keeping the app fairly similar
+
+### I'm also implementing some of the newer angular v17 features.
+
+### And I'm using Angular Material.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.8.
 
@@ -25,4 +35,3 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-# HomesApp
