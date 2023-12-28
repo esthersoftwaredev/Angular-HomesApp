@@ -2,13 +2,16 @@
 
 ## watch the [Angular Tutorials](https://angular.dev/tutorials/first-app) to build a similar app
 
-### Since I already added the locations list to the simple 
-### [Node.js & Express REST API](https://dummyrestapi.netlify.app/locations) that I developed,
-### I thought it might be nice to have the matching frontend to go along.
+### Since I already added the locations list to the simple [Node.js & Express REST API](https://dummyrestapi.netlify.app/locations) that I developed, I thought it might be nice to have the matching frontend to go along.
 
 ### This is not my first app and I am not following every single instruction from the tutorial but I am keeping the app fairly similar.
 
-### I'm also implementing some of the newer Angular v17 features and I'm using Angular Material ![ angular material logo ](/src/assets/images/icons/angular-material-16x16.png "Angular Material")
+## What I added:
+- ### REST API to serve the locations data
+- ### Angular v17 - new control flow and other adjustments
+- ### Angular Material ![ angular material logo ](/src/assets/images/icons/angular-material-16x16.png "Angular Material")
+- ### Form Validation with \<mat-error> - [adjusted this version](https://stackblitz.com/edit/angular-17-reactive-form-validation?file=src%2Fapp%2Fapp.component.html,src%2Fapp%2Fapp.component.ts,src%2Fapp%2Fapp.component.css)
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.8.
 

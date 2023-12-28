@@ -1,8 +1,8 @@
-import { Component, inject } from "@angular/core";
+import { Component, OnInit, inject } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 import { HousingService } from "../../services/housing.service";
 import { HousingLocation } from "../../models/housing-location";
-import { FormControl, FormGroup, ReactiveFormsModule } from "@angular/forms";
+import { AbstractControl, FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from "@angular/forms";
 
 import { MatCardModule } from "@angular/material/card";
 import { MatFormFieldModule } from "@angular/material/form-field";
@@ -24,7 +24,7 @@ import { MatIconModule } from "@angular/material/icon";
 	templateUrl: "./details.component.html",
 	styleUrl: "./details.component.scss",
 })
-export class DetailsComponent {
+export class DetailsComponent implements OnInit {
 	route: ActivatedRoute = inject(ActivatedRoute);
 	housingService = inject(HousingService);
 	housingLocation: HousingLocation | undefined;
@@ -36,13 +36,31 @@ export class DetailsComponent {
 		email: new FormControl(""),
 	});
 
-	constructor() {
+	constructor(private formBuilder: FormBuilder) {
 		const housingLocationId = Number(this.route.snapshot.params["id"]);
 		this.housingLocation =
 			this.housingService.getHousingLocationById(housingLocationId);
 	}
 
+  ngOnInit(): void {
+    this.applyForm = this.formBuilder.group(
+      {
+        firstName: ['', Validators.required],
+        lastName: ['', Validators.required],
+        email: ['', [Validators.required, Validators.email]],
+      }
+    );
+  }
+
+  get form(): { [key: string]: AbstractControl } {
+    return this.applyForm.controls;
+  }
+
   onSubmitApplication() {
+    if (this.form['invalid']) {
+      return;
+    }
+
     this.housingService.submitApplication(
       this.applyForm.value.firstName ?? '',
       this.applyForm.value.lastName ?? '',
@@ -52,6 +70,5 @@ export class DetailsComponent {
     setTimeout(() => {
       this.buttonValue = "Apply Now";
     }, 2000);
-    this.applyForm.reset();
   }
 }

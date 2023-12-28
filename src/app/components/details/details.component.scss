@@ -76,6 +76,7 @@ mat-card {
 
         mat-form-field {
           width: 50%;
+          margin: 0.3rem 0;
         }
 
         button {
@@ -84,11 +85,15 @@ mat-card {
           border: 2px solid #605dc8;
           text-transform: uppercase;
           font-weight: 600;
-          // margin: 1rem;
 
           &:hover {
             background-color: #e8e7fa;
             color: #605dc8;
+          }
+
+          &.btn-disabled {
+            background-color: gray;
+            border: 2px solid gray;
           }
         }
       }

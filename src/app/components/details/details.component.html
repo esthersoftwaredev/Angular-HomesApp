@@ -18,19 +18,32 @@
       <h2 class="section-heading">Apply now to live here</h2>
 
       <form [formGroup]="applyForm" (submit)="onSubmitApplication()">
+
         <mat-form-field>
           <mat-label>First Name</mat-label>
           <input type="text" matInput formControlName="firstName" id="first-name" placeholder="Write your first name">
+          @if (form['lastName'].errors) {
+            <mat-error>Please enter a valid first name</mat-error>
+            }
         </mat-form-field>
+
         <mat-form-field>
           <mat-label>Last Name</mat-label>
           <input type="text" matInput formControlName="lastName" id="last-name" placeholder="Write your last name">
+          @if (form['lastName'].errors) {
+            <mat-error>Please enter a valid last name</mat-error>
+            }
         </mat-form-field>
+
         <mat-form-field>
           <mat-label>Email</mat-label>
-          <input type="email" matInput formControlName="email" id="email" placeholder="Ex. pat@example.com">
+          <input type="email" matInput formControlName="email" id="email" placeholder="Ex. pat@example.com" required>
+          @if (form['email'].errors) {
+            <mat-error>Please enter a valid email</mat-error>
+            }
         </mat-form-field>
-        <button mat-raised-button type="submit">{{buttonValue}}</button>
+
+        <button mat-raised-button type="submit" [disabled]="applyForm.invalid" [class.btn-disabled]="applyForm.invalid">{{buttonValue}}</button>
       </form>
     </div>
   </div>
