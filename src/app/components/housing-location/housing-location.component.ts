@@ -1,11 +1,13 @@
 import { Component, Input } from '@angular/core';
-import {MatCardModule} from '@angular/material/card';
 import { HousingLocation } from '../../models/housing-location';
+
+import {MatCardModule} from '@angular/material/card';
+import {MatIconModule} from '@angular/material/icon';
 
 @Component({
   selector: 'app-housing-location',
   standalone: true,
-  imports: [MatCardModule],
+  imports: [MatCardModule, MatIconModule],
   templateUrl: './housing-location.component.html',
   styleUrl: './housing-location.component.scss'
 })
