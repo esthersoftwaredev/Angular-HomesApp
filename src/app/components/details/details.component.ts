@@ -1,5 +1,6 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { ActivatedRoute } from "@angular/router";
+import { HousingService } from '../../services/housing.service';
 
 @Component({
   selector: 'app-details',
@@ -8,11 +9,12 @@ import { ActivatedRoute } from "@angular/router";
   templateUrl: './details.component.html',
   styleUrl: './details.component.scss'
 })
-export class DetailsComponent implements OnInit {
+export class DetailsComponent {
   route: ActivatedRoute = inject(ActivatedRoute)
   housingLocationId = 0;
+  housingService = inject(HousingService);
 
-  ngOnInit(): void {
+  constructor () {
     this.housingLocationId = Number(this.route.snapshot.params['id']);
   }
 
