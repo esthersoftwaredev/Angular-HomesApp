@@ -21,7 +21,7 @@ import { MatIconModule } from "@angular/material/icon";
 export class HomeComponent {
 	housingLocationList: HousingLocation[] = [
 		{
-			id: 0,
+			id: 1,
 			name: "Acme Fresh Start Housing",
 			city: "Chicago",
 			state: "IL",
@@ -32,7 +32,7 @@ export class HomeComponent {
 			laundry: true,
 		},
 		{
-			id: 1,
+			id: 2,
 			name: "A113 Transitional Housing",
 			city: "Santa Monica",
 			state: "CA",
@@ -43,7 +43,7 @@ export class HomeComponent {
 			laundry: true,
 		},
 		{
-			id: 2,
+			id: 3,
 			name: "Warm Beds Housing Support",
 			city: "Juneau",
 			state: "AK",
@@ -54,7 +54,7 @@ export class HomeComponent {
 			laundry: false,
 		},
 		{
-			id: 3,
+			id: 4,
 			name: "Homesteady Housing",
 			city: "Chicago",
 			state: "IL",
@@ -65,7 +65,7 @@ export class HomeComponent {
 			laundry: false,
 		},
 		{
-			id: 4,
+			id: 5,
 			name: "Happy Homes Group",
 			city: "Gary",
 			state: "IN",
@@ -76,7 +76,7 @@ export class HomeComponent {
 			laundry: false,
 		},
 		{
-			id: 5,
+			id: 6,
 			name: "Hopeful Apartment Group",
 			city: "Oakland",
 			state: "CA",
@@ -87,7 +87,7 @@ export class HomeComponent {
 			laundry: true,
 		},
 		{
-			id: 6,
+			id: 7,
 			name: "Seriously Safe Towns",
 			city: "Oakland",
 			state: "CA",
@@ -98,7 +98,7 @@ export class HomeComponent {
 			laundry: true,
 		},
 		{
-			id: 7,
+			id: 8,
 			name: "Hopeful Housing Solutions",
 			city: "Oakland",
 			state: "CA",
@@ -109,7 +109,7 @@ export class HomeComponent {
 			laundry: true,
 		},
 		{
-			id: 8,
+			id: 9,
 			name: "Seriously Safe Towns",
 			city: "Oakland",
 			state: "CA",
@@ -120,7 +120,7 @@ export class HomeComponent {
 			laundry: false,
 		},
 		{
-			id: 9,
+			id: 10,
 			name: "Capital Safe Towns",
 			city: "Portland",
 			state: "OR",

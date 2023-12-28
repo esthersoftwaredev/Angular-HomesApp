@@ -7,7 +7,7 @@
       <p class="listing-location">{{housingLocation.city}}, {{housingLocation.state}}</p>
     </div>
     <div class="more">
-      <a routerLink="details" routerLinkActive="router-link-active"><p>Learn More</p> <mat-icon>chevron_right</mat-icon></a>
+      <a [routerLink]="['details', housingLocation.id]"><p>Learn More</p> <mat-icon>chevron_right</mat-icon></a>
     </div>
   </div>
 </mat-card>
