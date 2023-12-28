@@ -28,6 +28,7 @@ export class DetailsComponent {
 	route: ActivatedRoute = inject(ActivatedRoute);
 	housingService = inject(HousingService);
 	housingLocation: HousingLocation | undefined;
+  buttonValue: string = 'Apply Now';
 
 	applyForm = new FormGroup({
 		firstName: new FormControl(""),
@@ -41,7 +42,16 @@ export class DetailsComponent {
 			this.housingService.getHousingLocationById(housingLocationId);
 	}
 
-  submitApplication() {
-
+  onSubmitApplication() {
+    this.housingService.submitApplication(
+      this.applyForm.value.firstName ?? '',
+      this.applyForm.value.lastName ?? '',
+      this.applyForm.value.email ?? '',
+    )
+    this.buttonValue = "Application sent"
+    setTimeout(() => {
+      this.buttonValue = "Apply Now";
+    }, 2000);
+    this.applyForm.reset();
   }
 }

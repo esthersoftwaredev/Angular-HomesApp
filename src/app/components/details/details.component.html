@@ -17,7 +17,7 @@
     <div class="listing-apply">
       <h2 class="section-heading">Apply now to live here</h2>
 
-      <form [formGroup]="applyForm" (submit)="submitApplication()">
+      <form [formGroup]="applyForm" (submit)="onSubmitApplication()">
         <mat-form-field>
           <mat-label>First Name</mat-label>
           <input type="text" matInput formControlName="firstName" id="first-name" placeholder="Write your first name">
@@ -30,7 +30,7 @@
           <mat-label>Email</mat-label>
           <input type="email" matInput formControlName="email" id="email" placeholder="Ex. pat@example.com">
         </mat-form-field>
-        <button mat-raised-button type="submit">Apply now</button>
+        <button mat-raised-button type="submit">{{buttonValue}}</button>
       </form>
     </div>
   </div>
