@@ -7,7 +7,4 @@
 <section class="result">
   @for (housingLocation of filteredLocationList; track housingLocation) { <app-housing-location
     [housingLocation]="housingLocation"></app-housing-location> }
-    @if (this.filteredLocationList.length < 0) {
-      <p>No results</p>
-    }
 </section>
