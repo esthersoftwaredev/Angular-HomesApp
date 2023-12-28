@@ -1,6 +1,7 @@
 import { Injectable, inject } from "@angular/core";
 import { HousingLocation } from "../models/housing-location";
 import { HttpClient } from "@angular/common/http";
+import { Observable, map } from "rxjs";
 
 @Injectable({
 	providedIn: "root",
@@ -12,9 +13,13 @@ export class HousingService {
 
 	protected housingLocationsList: HousingLocation[] = [];
 
-	constructor() {}
+	constructor() {
+    this.getAllHousingLocations().subscribe((data) => {
+      this.housingLocationsList = data;
+    });
+  }
 
-	getAllHousingLocations() {
+	getAllHousingLocations(): Observable<HousingLocation[]> {
 		return this.http.get<HousingLocation[]>(this.apiURL);
 	}
 

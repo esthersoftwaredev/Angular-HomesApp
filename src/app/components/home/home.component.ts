@@ -20,12 +20,12 @@ import { HousingService } from "../../services/housing.service";
 	styleUrl: "./home.component.scss",
 })
 export class HomeComponent {
-	housingLocationList: HousingLocation[] = [];
+	housingLocationsList: HousingLocation[] = [];
   housingService: HousingService = inject(HousingService);
 
   constructor() {
     this.housingService.getAllHousingLocations().subscribe(data => {
-      this.housingLocationList = data;
+      this.housingLocationsList = data;
     });
   }
 }
