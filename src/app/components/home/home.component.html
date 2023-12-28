@@ -1,8 +1,9 @@
-<form>
+<form [formGroup]="filterForm">
   <mat-form-field>
-    <input matInput #filter type="text" placeholder="Filter by city">
-    <mat-icon matSuffix (click)="filterResults(filter.value)">search</mat-icon>
+    <input matInput formControlName="filter" type="text" placeholder="Filter by city">
   </mat-form-field>
+  <mat-icon matSuffix (click)="filterResults()" matTooltip="Filter" matTooltipPosition="above">search</mat-icon>
+  <mat-icon (click)="clearFilter()" matTooltip="Clear Filter" matTooltipPosition="above">refresh</mat-icon>
 </form>
 <section class="result">
   @for (housingLocation of filteredLocationList; track housingLocation) { <app-housing-location

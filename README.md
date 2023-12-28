@@ -1,4 +1,4 @@
-# Homes App
+# Homes App - [VIEW LIVE](https://homesangular.netlify.app/)
 
 ## watch the [Angular Tutorials](https://angular.dev/tutorials/first-app) to build a similar app
 

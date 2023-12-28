@@ -9,21 +9,25 @@
 
   form {
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     width: 100%;
 
     mat-form-field {
-      width: 20vw;
+      margin-right: 0.5rem;
+    }
 
-      mat-icon {
-        color: #605dc8;
-        font-size: 2rem;
-        padding-right: 1.1rem;
-        cursor: pointer;
-      }
+    mat-icon {
+      background-color: #605dc8;
+      color: #fff;
+      font-size: 2rem;
+      height: 2rem;
+      width: 2rem;
+      padding: 0.5rem;
+      margin: 0.2rem 0.3rem;
+      border-radius: 1rem;
+      cursor: pointer;
     }
   }
 
