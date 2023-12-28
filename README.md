@@ -7,10 +7,12 @@
 ### This is not my first app and I am not following every single instruction from the tutorial but I am keeping the app fairly similar.
 
 ## What I added:
-- ### REST API to serve the locations data
+- ### REST API to serve the location data
 - ### Angular v17 - new control flow and other adjustments
 - ### Angular Material ![ angular material logo ](/src/assets/images/icons/angular-material-16x16.png "Angular Material")
 - ### Form Validation with \<mat-error> - [adjusted this version](https://stackblitz.com/edit/angular-17-reactive-form-validation?file=src%2Fapp%2Fapp.component.html,src%2Fapp%2Fapp.component.ts,src%2Fapp%2Fapp.component.css)
+- ### my styling
+- ### Netlify deployment synced with GitHub
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.8.
