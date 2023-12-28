@@ -1,11 +1,12 @@
 <section>
-  <form class="example-form">
-    <mat-form-field class="example-full-width">
-      <input type="text" placeholder="Filter by city" >
+  <form>
+    <mat-form-field>
+      <input matInput type="text" placeholder="Filter by city">
       <mat-icon matSuffix>search</mat-icon>
     </mat-form-field>
   </form>
 </section>
 <section class="result">
-  <app-housing-location></app-housing-location>
+  @for (housingLocation of housingLocationList; track housingLocation) { <app-housing-location
+    [housingLocation]="housingLocation"></app-housing-location> }
 </section>
