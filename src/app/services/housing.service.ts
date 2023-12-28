@@ -11,11 +11,11 @@ export class HousingService {
 
 	apiURL = "https://monacodelisa-node-express.onrender.com/api/locations";
 
-	protected housingLocationsList: HousingLocation[] = [];
+	protected housingLocationList: HousingLocation[] = [];
 
 	constructor() {
     this.getAllHousingLocations().subscribe((data) => {
-      this.housingLocationsList = data;
+      this.housingLocationList = data;
     });
   }
 
@@ -24,7 +24,7 @@ export class HousingService {
 	}
 
 	getHousingLocationById(id: Number): HousingLocation | undefined {
-		return this.housingLocationsList.find(
+		return this.housingLocationList.find(
 			(housingLocation) => housingLocation.id === id
 		);
 	}

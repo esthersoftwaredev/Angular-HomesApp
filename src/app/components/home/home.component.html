@@ -1,10 +1,13 @@
 <form>
   <mat-form-field>
-    <input matInput type="text" placeholder="Filter by city">
-    <mat-icon matSuffix>search</mat-icon>
+    <input matInput #filter type="text" placeholder="Filter by city">
+    <mat-icon matSuffix (click)="filterResults(filter.value)">search</mat-icon>
   </mat-form-field>
 </form>
 <section class="result">
-  @for (housingLocation of housingLocationsList; track housingLocation) { <app-housing-location
+  @for (housingLocation of filteredLocationList; track housingLocation) { <app-housing-location
     [housingLocation]="housingLocation"></app-housing-location> }
+    @if (this.filteredLocationList.length < 0) {
+      <p>No results</p>
+    }
 </section>

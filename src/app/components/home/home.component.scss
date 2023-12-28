@@ -3,7 +3,8 @@
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  min-height: 73vh;
   padding: 2rem 0 2.5rem;
 
   form {
