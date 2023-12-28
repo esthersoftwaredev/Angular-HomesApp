@@ -16,7 +16,22 @@
     </div>
     <div class="listing-apply">
       <h2 class="section-heading">Apply now to live here</h2>
-      <button mat-raised-button>Apply now</button>
+
+      <form [formGroup]="applyForm" (submit)="submitApplication()">
+        <mat-form-field>
+          <mat-label>First Name</mat-label>
+          <input type="text" matInput formControlName="firstName" id="first-name" placeholder="Write your first name">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Last Name</mat-label>
+          <input type="text" matInput formControlName="lastName" id="last-name" placeholder="Write your last name">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Email</mat-label>
+          <input type="email" matInput formControlName="email" id="email" placeholder="Ex. pat@example.com">
+        </mat-form-field>
+        <button mat-raised-button type="submit">Apply now</button>
+      </form>
     </div>
   </div>
 </mat-card>
