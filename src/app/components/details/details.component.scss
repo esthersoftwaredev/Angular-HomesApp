@@ -1,0 +1,84 @@
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+mat-card {
+  background-color: #e8e7fa;
+  color: #605dc8;
+  width: 50rem;
+  margin: 1rem;
+  border-radius: 1.5rem;
+  font-family: 'Inter', sans-serif;
+
+  img {
+    width: 100%;
+    height: 28rem;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 1.5rem 1.5rem 0 0;
+  }
+
+  h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 1rem 0;
+  }
+
+  .details {
+    padding: 0 2rem 1.3rem;
+
+    h1 {
+      font-family: 'Inter', sans-serif;
+      font-size: 2rem;
+      font-weight: 600;
+      margin: 1.5rem 0 1rem;
+    }
+
+    h2 {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+    }
+
+    .location {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      margin: 1rem 0;
+
+      p {
+        font-size: 1.5rem;
+        margin: 0;
+      }
+    }
+
+    .features {
+      ul {
+        list-style: none;
+        li {
+          font-size: 1.1rem;
+          line-height: 1.5rem;
+        }
+      }
+    }
+
+    .listing-apply {
+      button {
+        background-color: #605dc8;
+        color: #fff;
+        border: 2px solid #605dc8;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin: 1rem;
+
+        &:hover {
+          background-color: #e8e7fa;
+          color: #605dc8;
+        }
+      }
+    }
+  }
+}
