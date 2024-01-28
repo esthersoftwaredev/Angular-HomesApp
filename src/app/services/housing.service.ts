@@ -9,7 +9,8 @@ import { Observable, map } from "rxjs";
 export class HousingService {
 	http: HttpClient = inject(HttpClient);
 
-	apiURL = "https://monacodelisa-node-express.onrender.com/api/locations";
+	// apiURL = "https://monacodelisa-node-express.onrender.com/api/locations";
+	apiURL = "https://monacodelisa-node-express.cyclic.app/api/locations";
 
 	protected housingLocationList: HousingLocation[] = [];
 
