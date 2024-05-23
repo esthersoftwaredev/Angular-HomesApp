@@ -10,12 +10,13 @@ export class HousingService {
 	http: HttpClient = inject(HttpClient);
 
 	// apiURL = "https://monacodelisa-node-express.onrender.com/api/locations";
-	apiURL = "https://monacodelisa-node-express.cyclic.app/api/locations";
+	// apiURL = "https://monacodelisa-node-express.cyclic.app/api/locations";
+	apiURL = "https://rest-api.monacodelisa.dev/api/locations";
 
 	protected housingLocationList: HousingLocation[] = [];
 
 	constructor() {
-    this.getAllHousingLocations().subscribe((data) => {
+    this.getAllHousingLocations().subscribe((data: HousingLocation[]) => {
       this.housingLocationList = data;
     });
   }
