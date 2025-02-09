@@ -12,7 +12,8 @@ export class HousingService {
 	// apiURL = "https://monacodelisa-node-express.onrender.com/api/locations";
 	// apiURL = "https://monacodelisa-node-express.cyclic.app/api/locations";
 	// apiURL = "https://rest-api.monacodelisa.dev/api/locations";
-	apiURL = "https://dummy-data.ewbeserver.de/api/locations";
+	// apiURL = "https://dummy-data.ewbeserver.de/api/locations";
+	apiURL = "https://my-api.esthersoftware.dev/api/locations";
 
 	protected housingLocationList: HousingLocation[] = [];
 
